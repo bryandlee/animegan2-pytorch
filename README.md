@@ -1,7 +1,7 @@
 ## PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
 
 
-**Weight Conversion (Optional)**
+**Weight Conversion (Optional, requires TensorFlow 1.x)**
 ```
 git clone https://github.com/TachibanaYoshino/AnimeGANv2
 python convert_weights.py
@@ -20,4 +20,4 @@ python test.py --input_dir [image_folder_path]
 <img src="./samples/compare/2.jpg" width="960"> &nbsp; 
 <img src="./samples/compare/3.jpg" width="960"> &nbsp; 
 
-**Note:** Training code not included / Results looks slightly blurrier than the original ones.
+**Note:** Training code not included / Tested on RTX3090 + PyTorch1.7.1

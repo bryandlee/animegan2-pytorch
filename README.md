@@ -16,8 +16,8 @@ python test.py --input_dir [image_folder_path]
 
 (input image, original tensorflow result, pytorch result from left to right)
 
-<img src="./samples/compare/1.jpg" width="650"> &nbsp; 
-<img src="./samples/compare/2.jpg" width="650"> &nbsp; 
-<img src="./samples/compare/3.jpg" width="650"> &nbsp; 
+<img src="./samples/compare/1.jpg" width="960"> &nbsp; 
+<img src="./samples/compare/2.jpg" width="960"> &nbsp; 
+<img src="./samples/compare/3.jpg" width="960"> &nbsp; 
 
 **Note:** Training code not included / Results looks slightly blurrier than the original ones.

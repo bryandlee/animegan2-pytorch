@@ -1,4 +1,4 @@
-### PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
+## PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
 
 
 **Weight Conversion (Optional)**

@@ -5,13 +5,11 @@
 ```
 git clone https://github.com/TachibanaYoshino/AnimeGANv2
 python convert_weights.py
-
 ```
 
 **Inference**
 ```
 python test.py --input_dir [image_folder_path]
-
 ```
 
 **Results from converted [[Paprika](https://drive.google.com/file/d/1K_xN32uoQKI8XmNYNLTX5gDn1UnQVe5I/view?usp=sharing)] style model**

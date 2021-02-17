@@ -20,7 +20,7 @@ def load_tf_weights(tf_path):
     with tf.Session(config=tf.ConfigProto(allow_soft_placement=True, device_count = {'GPU': 0})) as sess:
         ckpt = tf.train.get_checkpoint_state(tf_path)
 
-        assert ckpt is not None and ckpt.model_checkpoint_path is not None, f"Failed to load checkpoint {checkpoint_dir}"
+        assert ckpt is not None and ckpt.model_checkpoint_path is not None, f"Failed to load checkpoint {tf_path}"
 
         saver.restore(sess, ckpt.model_checkpoint_path)
         print(f"Tensorflow model checkpoint {ckpt.model_checkpoint_path} loaded")

@@ -20,4 +20,4 @@ python test.py --input_dir [image_folder_path]
 <img src="./samples/compare/2.jpg" width="960"> &nbsp; 
 <img src="./samples/compare/3.jpg" width="960"> &nbsp; 
 
-**Note:** Training code not included / Tested on RTX3090 + PyTorch1.7.1 / Result slightly different due to [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)
+**Note:** Training code not included / Tested on RTX3090 + PyTorch1.7.1 / Results slightly different due to the [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)

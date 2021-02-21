@@ -1,7 +1,7 @@
 ## PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
 
 
-**Face Model**: Distilled from [this model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for the inference. Model file can be downloaded from [here](https://drive.google.com/file/d/10T6F3-_RFOCJn6lMb-6mRmcISuYWJXGc/view?usp=sharing) (only 8MB). Enjoy!
+**Face Model**: Distilled from [this model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for the inference. Model file can be downloaded from [here](https://drive.google.com/file/d/10T6F3-_RFOCJn6lMb-6mRmcISuYWJXGc/view?usp=sharing) (8MB). Enjoy!
 
 
 <img src="./samples/face_results.jpg" width="512"> &nbsp; 

@@ -15,7 +15,7 @@ python convert_weights.py
 
 **Inference**
 ```
-python test.py --input_dir [image_folder_path]
+python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 ```
 
 

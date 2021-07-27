@@ -14,7 +14,7 @@ python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 
 
 
-**Results from converted [[Paprika](https://drive.google.com/file/d/1K_xN32uoQKI8XmNYNLTX5gDn1UnQVe5I/view?usp=sharing)] style model**
+**Results from converted [[Paprika]](https://drive.google.com/file/d/1K_xN32uoQKI8XmNYNLTX5gDn1UnQVe5I/view?usp=sharing) style model**
 
 (input image, original tensorflow result, pytorch result from left to right)
 
@@ -22,12 +22,34 @@ python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 <img src="./samples/compare/2.jpg" width="960"> &nbsp; 
 <img src="./samples/compare/3.jpg" width="960"> &nbsp; 
 
+**Note:** Training code not included / Tested on RTX3090 + PyTorch1.7.1 / Results from converted weights slightly different due to the [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)
 
-**Face Model**: Distilled from [this model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for the inference. Model file can be downloaded from [here](https://drive.google.com/file/d/10T6F3-_RFOCJn6lMb-6mRmcISuYWJXGc/view?usp=sharing) (8MB). Enjoy!
 
+
+
+## Additional Models
+
+**Webtoon Face Model** [[ckpt]](https://drive.google.com/file/d/10T6F3-_RFOCJn6lMb-6mRmcISuYWJXGc)
+
+<details>
+<summary>samples</summary>
+
+Works best on <b>256x256</b> face images. Distilled from [webtoon face model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for details.
 
 <img src="./samples/face_results.jpg" width="512"> &nbsp; 
+  
+</details>
 
 
+**Face Portrait Model v1** [[ckpt]](https://drive.google.com/file/d/1WK5Mdt6mwlcsqCZMHkCUSDJxN1UyFi0-)
 
-**Note:** Training code not included / Tested on RTX3090 + PyTorch1.7.1 / Results from converted weights slightly different due to the [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)
+<details>
+<summary>samples</summary>
+
+Works best on <b>512x512</b> face images. (WIP)
+  
+![samples](https://user-images.githubusercontent.com/26464535/127134790-93595da2-4f8b-4aca-a9d7-98699c5e6914.jpg)
+
+</details>
+
+

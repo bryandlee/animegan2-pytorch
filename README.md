@@ -29,7 +29,7 @@ python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 
 ## Additional Models
 
-**Webtoon Face Model** [[ckpt]](https://drive.google.com/file/d/10T6F3-_RFOCJn6lMb-6mRmcISuYWJXGc)
+**Webtoon Face** [[ckpt]](https://drive.google.com/file/d/10T6F3-_RFOCJn6lMb-6mRmcISuYWJXGc)
 
 <details>
 <summary>samples</summary>
@@ -41,7 +41,7 @@ Works best on <b>256x256</b> face images. Distilled from [webtoon face model](ht
 </details>
 
 
-**Face Portrait Model v1** [[ckpt]](https://drive.google.com/file/d/1WK5Mdt6mwlcsqCZMHkCUSDJxN1UyFi0-)
+**Face Portrait v1** [[ckpt]](https://drive.google.com/file/d/1WK5Mdt6mwlcsqCZMHkCUSDJxN1UyFi0-)
 
 <details>
 <summary>samples</summary>

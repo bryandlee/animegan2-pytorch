@@ -52,9 +52,10 @@ Works best on <b>512x512</b> face images. (WIP)
   
 ![samples](https://user-images.githubusercontent.com/26464535/127134790-93595da2-4f8b-4aca-a9d7-98699c5e6914.jpg)
 
- ![sample](https://user-images.githubusercontent.com/26464535/129888683-98bb6283-7bb8-4d1a-a04a-e795f5858dcf.gif)
-
+[📺](https://youtu.be/CbMfI-HNCzw?t=317)
   
+![sample](https://user-images.githubusercontent.com/26464535/129888683-98bb6283-7bb8-4d1a-a04a-e795f5858dcf.gif)
+
 </details>
 
 

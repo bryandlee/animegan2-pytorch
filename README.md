@@ -34,7 +34,7 @@ python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 <details>
 <summary>samples</summary>
 
-Works best on <b>256x256</b> face images. Distilled from [webtoon face model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for details.
+Trained on <b>256x256</b> face images. Distilled from [webtoon face model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for details.
 
 <img src="./samples/face_results.jpg" width="512"> &nbsp; 
   
@@ -46,8 +46,8 @@ Works best on <b>256x256</b> face images. Distilled from [webtoon face model](ht
 <details>
 <summary>samples</summary>
 
-Works best on <b>512x512</b> face images. (WIP)
-  
+Trained on <b>512x512</b> face images.
+
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jCqcKekdtKzW7cxiw_bjbbfLsPh-dEds?usp=sharing)
   
 ![samples](https://user-images.githubusercontent.com/26464535/127134790-93595da2-4f8b-4aca-a9d7-98699c5e6914.jpg)
@@ -55,6 +55,25 @@ Works best on <b>512x512</b> face images. (WIP)
 [📺](https://youtu.be/CbMfI-HNCzw?t=317)
   
 ![sample](https://user-images.githubusercontent.com/26464535/129888683-98bb6283-7bb8-4d1a-a04a-e795f5858dcf.gif)
+
+</details>
+
+
+**Face Portrait v2** (WIP)
+
+<details>
+<summary>samples</summary>
+
+Trained on <b>512x512</b> face images. Compared to v1, `🔻 beautify` `🔺 robustness` 
+
+![face_portrait_v2_0](https://user-images.githubusercontent.com/26464535/137619176-59620b59-4e20-4d98-9559-a424f86b7f24.jpg)
+
+![face_portrait_v2_1](https://user-images.githubusercontent.com/26464535/137619181-a45c9230-f5e7-4f3c-8002-7c266f89de45.jpg)
+
+🦑 🎮 🔥
+  
+![face_portrait_v2_squid_game](https://user-images.githubusercontent.com/26464535/137619183-20e94f11-7a8e-4c3e-9b45-378ab63827ca.jpg)
+
 
 </details>
 

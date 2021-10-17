@@ -59,13 +59,15 @@ Trained on <b>512x512</b> face images.
 </details>
 
 
-**Face Portrait v2** (WIP)
+**Face Portrait v2** [[ckpt]](https://drive.google.com/uc?id=18H3iK09_d54qEDoWIc82SyWB2xun4gjU)
 
 <details>
 <summary>samples</summary>
 
 Trained on <b>512x512</b> face images. Compared to v1, `🔻 beautify` `🔺 robustness` 
 
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jCqcKekdtKzW7cxiw_bjbbfLsPh-dEds?usp=sharing)
+  
 ![face_portrait_v2_0](https://user-images.githubusercontent.com/26464535/137619176-59620b59-4e20-4d98-9559-a424f86b7f24.jpg)
 
 ![face_portrait_v2_1](https://user-images.githubusercontent.com/26464535/137619181-a45c9230-f5e7-4f3c-8002-7c266f89de45.jpg)

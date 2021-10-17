@@ -64,7 +64,7 @@ Trained on <b>512x512</b> face images.
 <details>
 <summary>samples</summary>
 
-Trained on <b>512x512</b> face images. Compared to v1, `🔻 beautify` `🔺 robustness` 
+Trained on <b>512x512</b> face images. Compared to v1, `🔻beautify` `🔺robustness` 
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jCqcKekdtKzW7cxiw_bjbbfLsPh-dEds?usp=sharing)
   

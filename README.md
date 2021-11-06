@@ -23,6 +23,14 @@ model = torch.hub.load(
 )
 ```
 
+Currently, the following `pretrained` shorthands are available:
+```python
+model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="celeba_distill")
+model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="face_paint_512_v1")
+model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="face_paint_512_v2")
+model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="paprika")
+```
+
 You can also load the `face2paint` util function. First, install dependencies:
 
 ```

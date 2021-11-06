@@ -1,6 +1,46 @@
 ## PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
 
 
+**Torch Hub Usage**
+
+You can load Animegan v2 via `torch.hub`:
+
+```python
+import torch
+model = torch.hub.load('xhlulu/animegan2-pytorch', 'generator').eval()
+# convert your image into tensor here
+out = model(img_tensor)
+```
+
+You can load with various configs (more details in [the torch docs](https://pytorch.org/docs/stable/hub.html)):
+```python
+model = torch.hub.load(
+    "xhlulu/animegan2-pytorch",
+    "generator",
+    pretrained=True, # or give URL to a pretrained model
+    device="cuda", # or "cpu" if you don't have a GPU
+    progress=True, # show progress
+)
+```
+
+You can also load the `face2paint` util function. First, install dependencies:
+
+```
+pip install torchvision Pillow numpy
+```
+
+Then, import the function using `torch.hub`:
+```python
+face2paint = torch.hub.load(
+    'xhlulu/animegan2-pytorch', 'face2paint', 
+    size=512, device="cpu"
+)
+
+img = Image.open(...).convert("RGB")
+out = face2paint(model, img)
+```
+
+
 **Weight Conversion from the Original Repo (Requires TensorFlow 1.x)**
 ```
 git clone https://github.com/TachibanaYoshino/AnimeGANv2
@@ -78,5 +118,3 @@ Trained on <b>512x512</b> face images. Compared to v1, `🔻beautify` `🔺robus
 
 
 </details>
-
-

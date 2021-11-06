@@ -1,9 +1,10 @@
 import torch
-from model import Generator
-
 
 def animegan2(pretrained=True, device="cpu", progress=True, check_hash=True):
+    from model import Generator
+
     model = Generator()
+
     if type(pretrained) == str:
         ckpt_url = pretrained
         pretrained = True
@@ -18,3 +19,5 @@ def animegan2(pretrained=True, device="cpu", progress=True, check_hash=True):
             check_hash=check_hash,
         )
         model.load_state_dict(state_dict)
+
+    return model

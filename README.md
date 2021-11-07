@@ -3,8 +3,8 @@
 
 **Updates**
 
-* `2020-10-17` Add weights for [face portrait v2](https://github.com/bryandlee/animegan2-pytorch#additional-models)
-* `2020-11-07` Thanks to [ak92501](https://twitter.com/ak92501), a web demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). See demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/AnimeGANv2)
+* `2021-10-17` Add weights for [face portrait v2](https://github.com/bryandlee/animegan2-pytorch#additional-models)
+* `2021-11-07` Thanks to [ak92501](https://twitter.com/ak92501), a web demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). See demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/AnimeGANv2)
 
 
 

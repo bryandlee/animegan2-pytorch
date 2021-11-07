@@ -7,7 +7,7 @@ You can load Animegan v2 via `torch.hub`:
 
 ```python
 import torch
-model = torch.hub.load('xhlulu/animegan2-pytorch', 'generator').eval()
+model = torch.hub.load('bryandlee/animegan2-pytorch', 'generator').eval()
 # convert your image into tensor here
 out = model(img_tensor)
 ```
@@ -15,7 +15,7 @@ out = model(img_tensor)
 You can load with various configs (more details in [the torch docs](https://pytorch.org/docs/stable/hub.html)):
 ```python
 model = torch.hub.load(
-    "xhlulu/animegan2-pytorch",
+    "bryandlee/animegan2-pytorch",
     "generator",
     pretrained=True, # or give URL to a pretrained model
     device="cuda", # or "cpu" if you don't have a GPU
@@ -25,10 +25,10 @@ model = torch.hub.load(
 
 Currently, the following `pretrained` shorthands are available:
 ```python
-model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="celeba_distill")
-model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="face_paint_512_v1")
-model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="face_paint_512_v2")
-model = torch.hub.load("xhlulu/animegan2-pytorch", "generator", pretrained="paprika")
+model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="celeba_distill")
+model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="face_paint_512_v1")
+model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="face_paint_512_v2")
+model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="paprika")
 ```
 
 You can also load the `face2paint` util function. First, install dependencies:
@@ -40,7 +40,7 @@ pip install torchvision Pillow numpy
 Then, import the function using `torch.hub`:
 ```python
 face2paint = torch.hub.load(
-    'xhlulu/animegan2-pytorch', 'face2paint', 
+    'bryandlee/animegan2-pytorch', 'face2paint', 
     size=512, device="cpu"
 )
 

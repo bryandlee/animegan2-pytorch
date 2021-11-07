@@ -33,7 +33,7 @@ python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 <img src="./samples/compare/2.jpg" width="960"> &nbsp; 
 <img src="./samples/compare/3.jpg" width="960"> &nbsp; 
 
-**Note:** Training code not included / Tested on RTX3090 + PyTorch1.7.1 / Results from converted weights slightly different due to the [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)
+**Note:** Training code not included / Results from converted weights slightly different due to the [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)
 
 
 
@@ -105,7 +105,7 @@ out = model(img_tensor)
 You can load with various configs (more details in [the torch docs](https://pytorch.org/docs/stable/hub.html)):
 ```python
 model = torch.hub.load(
-    "bryandlee/animegan2-pytorch",
+    "bryandlee/animegan2-pytorch:main",
     "generator",
     pretrained=True, # or give URL to a pretrained model
     device="cuda", # or "cpu" if you don't have a GPU
@@ -115,10 +115,10 @@ model = torch.hub.load(
 
 Currently, the following `pretrained` shorthands are available:
 ```python
-model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="celeba_distill")
-model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="face_paint_512_v1")
-model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="face_paint_512_v2")
-model = torch.hub.load("bryandlee/animegan2-pytorch", "generator", pretrained="paprika")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="celeba_distill")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v1")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="paprika")
 ```
 
 You can also load the `face2paint` util function. First, install dependencies:
@@ -130,7 +130,7 @@ pip install torchvision Pillow numpy
 Then, import the function using `torch.hub`:
 ```python
 face2paint = torch.hub.load(
-    'bryandlee/animegan2-pytorch', 'face2paint', 
+    'bryandlee/animegan2-pytorch:main', 'face2paint', 
     size=512, device="cpu"
 )
 

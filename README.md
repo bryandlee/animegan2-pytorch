@@ -48,6 +48,13 @@ img = Image.open(...).convert("RGB")
 out = face2paint(model, img)
 ```
 
+**Updates**
+
+* `2021-10-17` Add weights for [face portrait v2](https://github.com/bryandlee/animegan2-pytorch#additional-models)
+* `2021-11-07` Thanks to [ak92501](https://twitter.com/ak92501), a web demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). 
+ 
+    See demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/AnimeGANv2)
+
 
 **Weight Conversion from the Original Repo (Requires TensorFlow 1.x)**
 ```
@@ -59,7 +66,6 @@ python convert_weights.py
 ```
 python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 ```
-
 
 
 **Results from converted [[Paprika]](https://drive.google.com/file/d/1K_xN32uoQKI8XmNYNLTX5gDn1UnQVe5I/view?usp=sharing) style model**

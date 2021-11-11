@@ -1,24 +1,57 @@
 ## PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
 
 
-**Updates**
-
-* `2021-10-17` Add weights for [FacePortraitV2](#additional-model-weights)
-* `2021-11-07` Thanks to [ak92501](https://twitter.com/ak92501), a web demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). 
- 
-    See demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/AnimeGANv2)
-
-* `2021-11-07` Thanks to [xhlulu](https://github.com/xhlulu), the `torch.hub` model is now available. See [Torch Hub Usage](#torch-hub-usage).
-* `2021-11-07` Add FacePortraitV2 style demo to a telegram bot. See [@face2stickerbot](https://t.me/face2stickerbot) by [sxela](https://github.com/sxela)
+**This is a fork version that has a script to evaluate Face Portrait v2 locally**
  
  
-## Basic Usage
+## Setup
+We are going to use Anaconda3, download [Anaconda3](https://www.anaconda.com/products/individual) if you don't have it.  
 
 **Weight Conversion from the Original Repo (Requires TensorFlow 1.x)**
 ```
 git clone https://github.com/TachibanaYoshino/AnimeGANv2
 python convert_weights.py
 ```
+
+Create conda environment:
+```
+conda create -n AnimeGANv2 python=3.7
+conda activate AnimeGANv2
+```
+Setup conda environment for nvidia non-30 series GPU:
+```
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+```
+Setup conda environment for nvidia 30 series GPU:
+```
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+Setup the rest of the conda environment:
+```
+
+```
+
+
+To reuse the created conda environment, you just need to:
+```
+conda activate AnimeGANv2
+```
+
+File Structure:
+```
+📂animegan2-pytorch/ # this is root
+├── 📜shape_predictor_68_face_landmarks.dat
+├── 📜pytorch_generator_Paprika.pt
+├── 📜face_paint_512_v2_0.pt
+├── 📜requirements.txt
+├── 📂weights/
+│   └── 📜face_paint_512_v2_0.pt
+├── 📂samples/
+│   │...
+│...
+```
+
+
 
 **Inference**
 ```

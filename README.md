@@ -1,7 +1,7 @@
 ## PyTorch Implementation of [AnimeGANv2](https://github.com/TachibanaYoshino/AnimeGANv2)
 
 
-**This is a fork version that has a script to evaluate Face Portrait v2 locally**
+**This is a fork version that can evaluate Face Portrait v2 locally, both images & videos**
 
 Follow this YouTube [tutorial]() or if you have any questions feel free to join my [discord](https://discord.gg/sE8R7e45MV) and ask there.
  

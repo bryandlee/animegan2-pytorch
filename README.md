@@ -2,9 +2,10 @@
 
 
 **This is a fork version that has a script to evaluate Face Portrait v2 locally**
+
+Follow this YouTube [tutorial]() or if you have any questions feel free to join my [discord](https://discord.gg/sE8R7e45MV) and ask there.
  
- 
-## Setup
+## Setup Environment
 We are going to use Anaconda3, download [Anaconda3](https://www.anaconda.com/products/individual) if you don't have it.  
 
 **Weight Conversion from the Original Repo (Requires TensorFlow 1.x)**
@@ -28,37 +29,81 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 Setup the rest of the conda environment:
 ```
-
+pip install -r requirements.txt
+conda install -c conda-forge ffmpeg
 ```
 
-
-To reuse the created conda environment, you just need to:
+*To reuse the created conda environment after you close the prompt, you just need to*:
 ```
 conda activate AnimeGANv2
 ```
 
+## Setup Files
+
+Download the following files:
+- [shape_predictor_68_face_landmarks](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
+- [face_paint_512_v2_0.pt](https://drive.google.com/uc?id=18H3iK09_d54qEDoWIc82SyWB2xun4gjU)
+
 File Structure:
 ```
 📂animegan2-pytorch/ # this is root
-├── 📜shape_predictor_68_face_landmarks.dat
-├── 📜pytorch_generator_Paprika.pt
+├── 📜shape_predictor_68_face_landmarks.dat (unzip it after download)
 ├── 📜face_paint_512_v2_0.pt
 ├── 📜requirements.txt
-├── 📂weights/
-│   └── 📜face_paint_512_v2_0.pt
 ├── 📂samples/
 │   │...
 │...
 ```
 
 
+## Inference & Evaluate
 
-**Inference**
+### Inference on an image
+
+Put the image/s you want to evaluate into the sample/inputs folder.
+
+Run the following command:
 ```
-python test.py --input_dir [image_folder_path] --device [cpu/cuda]
+python face_test.py
+```
+And you will find the results under `sample/results`
+
+### Inference on a video
+
+We are going to use ffmpeg to extract videos frame by frame, evaluate them inividually, and combine them back together.
+
+Choose a video, for example mine will be `elon.mp4`, and put it in the `input` folder. Also create a folder called `temp`, it'll be where we store all the extracted images from the video.
+
+Extract the frames in this format:
+```
+ffmpeg -i input/YOUR_VIDEO -vf fps=YOUR_VIDEO_FPS samples/temp/YOUR_VIDEO_NAME%06d.jpg
+```
+For my example, it'll be:
+```
+ffmpeg -i input/elon.mp4 -vf fps=30 samples/temp/elon%06d.jpg
 ```
 
+Now we going to run the images through the AI:
+```
+python face_test.py --input_dir samples/temp
+```
 
+After this is done, you can combine the result images back together.
+
+Putting frames back together with this format:
+```
+ffmpeg -i samples/results/YOUR_VIDEO_NAME%06d.jpg -vf fps=YOUR_VIDEO_FPS samples/YOUR_VIDEO_NAME_result.mp4
+```
+
+For my example, it'll be:
+```
+ffmpeg -i samples/results/elon%06d.jpg -vf fps=30 samples/elon_result.mp4
+```
+
+And you can find your video under the samples folder. And that's it!
+
+
+## Official Results:
 **Results from converted [[Paprika]](https://drive.google.com/file/d/1K_xN32uoQKI8XmNYNLTX5gDn1UnQVe5I/view?usp=sharing) style model**
 
 (input image, original tensorflow result, pytorch result from left to right)

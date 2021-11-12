@@ -8,32 +8,28 @@ Follow this YouTube [tutorial]() or if you have any questions feel free to join 
 ## Setup Environment
 We are going to use Anaconda3, download [Anaconda3](https://www.anaconda.com/products/individual) if you don't have it.  
 
-**Weight Conversion from the Original Repo (Requires TensorFlow 1.x)**
-```
-git clone https://github.com/TachibanaYoshino/AnimeGANv2
-python convert_weights.py
-```
-
-Create conda environment:
+- Create conda environment:
 ```
 conda create -n AnimeGANv2 python=3.7
 conda activate AnimeGANv2
 ```
-Setup conda environment for nvidia non-30 series GPU:
+- Setup conda environment for nvidia non-30 series GPU:
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 ```
-Setup conda environment for nvidia 30 series GPU:
+- Setup conda environment for nvidia 30 series GPU:
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
-Setup the rest of the conda environment:
+- Setup the rest of the conda environment:
+
+clone this repo, and `cd` into the base folder. Then enter the following commands:
 ```
 pip install -r requirements.txt
 conda install -c conda-forge ffmpeg
 ```
 
-*To reuse the created conda environment after you close the prompt, you just need to*:
+- *To reuse the created conda environment after you close the prompt, you just need to*:
 ```
 conda activate AnimeGANv2
 ```

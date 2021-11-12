@@ -201,7 +201,7 @@ def test(args):
             
 
             # cv2.imwrite(os.path.join(args.output_dir, image_name), , cv2.COLOR_BGR2RGB)
-            face2paint(face, 512).save("samples/results/"+image_name+".png")
+            face2paint(face, 512).save("samples/results/"+image_name)
             print(f"image saved: {image_name}")
 
 

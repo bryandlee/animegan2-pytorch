@@ -72,11 +72,11 @@ Choose a video, for example mine will be `elon.mp4`, and put it in the `input` f
 
 Extract the frames in this format:
 ```
-ffmpeg -i input/YOUR_VIDEO -vf fps=YOUR_VIDEO_FPS samples/temp/YOUR_VIDEO_NAME%06d.jpg
+ffmpeg -i input/YOUR_VIDEO -vf fps=YOUR_VIDEO_FPS samples/temp/YOUR_VIDEO_NAME%06d.png
 ```
 For my example, it'll be:
 ```
-ffmpeg -i input/elon.mp4 -vf fps=30 samples/temp/elon%06d.jpg
+ffmpeg -i input/elon.mp4 -vf fps=30 samples/temp/elon%06d.png
 ```
 
 Now we going to run the images through the AI:
@@ -88,12 +88,12 @@ After this is done, you can combine the result images back together.
 
 Putting frames back together with this format:
 ```
-ffmpeg -i samples/results/YOUR_VIDEO_NAME%06d.jpg -vf fps=YOUR_VIDEO_FPS samples/YOUR_VIDEO_NAME_result.mp4
+ffmpeg -i samples/results/YOUR_VIDEO_NAME%06d.png -vf fps=YOUR_VIDEO_FPS samples/YOUR_VIDEO_NAME_result.mp4
 ```
 
 For my example, it'll be:
 ```
-ffmpeg -i samples/results/elon%06d.jpg -vf fps=30 samples/elon_result.mp4
+ffmpeg -i samples/results/elon%06d.png -vf fps=30 samples/elon_result.mp4
 ```
 
 And you can find your video under the samples folder. And that's it!

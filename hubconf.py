@@ -41,7 +41,7 @@ def face2paint(device="cpu", size=512, side_by_side=False):
         model: torch.nn.Module,
         img: Image.Image,
         size: int = size,
-        side_by_side: bool = False,
+        side_by_side: bool = side_by_side,
         device: str = device,
     ) -> Image.Image:
         w, h = img.size

@@ -33,7 +33,7 @@ def generator(pretrained=True, device="cpu", progress=True, check_hash=True):
     return model
 
 
-def face2paint(device="cpu", size=512):
+def face2paint(device="cpu", size=512, side_by_side=True):
     from PIL import Image
     from torchvision.transforms.functional import to_tensor, to_pil_image
 

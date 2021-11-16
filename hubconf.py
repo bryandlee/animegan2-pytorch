@@ -33,7 +33,7 @@ def generator(pretrained=True, device="cpu", progress=True, check_hash=True):
     return model
 
 
-def face2paint(device="cpu", size=512, side_by_side=True):
+def face2paint(device="cpu", size=512, side_by_side=False):
     from PIL import Image
     from torchvision.transforms.functional import to_tensor, to_pil_image
 
@@ -41,7 +41,7 @@ def face2paint(device="cpu", size=512, side_by_side=True):
         model: torch.nn.Module,
         img: Image.Image,
         size: int = size,
-        side_by_side: bool = True,
+        side_by_side: bool = False,
         device: str = device,
     ) -> Image.Image:
         w, h = img.size

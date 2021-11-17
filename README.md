@@ -5,9 +5,12 @@
 
 * `2021-10-17` Add weights for [FacePortraitV2](#additional-model-weights). [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bryandlee/animegan2-pytorch/blob/main/colab_demo.ipynb)
 
+    ![sample](https://user-images.githubusercontent.com/26464535/142294796-54394a4a-a566-47a1-b9ab-4e715b901442.gif)
+
 * `2021-11-07` Thanks to [ak92501](https://twitter.com/ak92501), a [web demo](https://huggingface.co/spaces/akhaliq/AnimeGANv2) is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/AnimeGANv2)
 
 * `2021-11-07` Thanks to [xhlulu](https://github.com/xhlulu), the `torch.hub` model is now available. See [Torch Hub Usage](#torch-hub-usage).
+
 * `2021-11-07` Add FacePortraitV2 style demo to a telegram bot. See [@face2stickerbot](https://t.me/face2stickerbot) by [sxela](https://github.com/sxela)
  
  
@@ -24,18 +27,49 @@ python convert_weights.py
 python test.py --input_dir [image_folder_path] --device [cpu/cuda]
 ```
 
+<details>
+<summary>samples</summary>
 
-**Results from converted [[Paprika]](https://drive.google.com/file/d/1K_xN32uoQKI8XmNYNLTX5gDn1UnQVe5I/view?usp=sharing) style model**
-
-(input image, original tensorflow result, pytorch result from left to right)
+<br>
+Results from converted `Paprika` style model (input image, original tensorflow result, pytorch result from left to right)
 
 <img src="./samples/compare/1.jpg" width="960"> &nbsp; 
 <img src="./samples/compare/2.jpg" width="960"> &nbsp; 
 <img src="./samples/compare/3.jpg" width="960"> &nbsp; 
-
+   
+</details>
+ 
 **Note:** Training code not included / Results from converted weights slightly different due to the [bilinear upsample issue](https://github.com/pytorch/pytorch/issues/10604)
 
 
+## Torch Hub Usage
+
+You can load the model via `torch.hub`:
+
+```python
+import torch
+model = torch.hub.load("bryandlee/animegan2-pytorch", "generator").eval()
+out = model(img_tensor)  # BCHW tensor
+```
+
+Currently, the following `pretrained` shorthands are available:
+```python
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="celeba_distill")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v1")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2")
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="paprika")
+```
+
+You can also load the `face2paint` util function:
+```python
+from PIL import Image
+
+face2paint = torch.hub.load("bryandlee/animegan2-pytorch:main", "face2paint", size=512)
+
+img = Image.open(...).convert("RGB")
+out = face2paint(model, img)
+```
+More details about `torch.hub` is in [the torch docs](https://pytorch.org/docs/stable/hub.html)
 
 
 ## Additional Model Weights
@@ -91,49 +125,3 @@ Trained on <b>512x512</b> face images. Compared to v1, `🔻beautify` `🔺robus
 </details>
 
 
-## Torch Hub Usage
-
-You can load Animegan v2 via `torch.hub`:
-
-```python
-import torch
-model = torch.hub.load('bryandlee/animegan2-pytorch', 'generator').eval()
-# convert your image into tensor here
-out = model(img_tensor)
-```
-
-You can load with various configs (more details in [the torch docs](https://pytorch.org/docs/stable/hub.html)):
-```python
-model = torch.hub.load(
-    "bryandlee/animegan2-pytorch:main",
-    "generator",
-    pretrained=True, # or give URL to a pretrained model
-    device="cuda", # or "cpu" if you don't have a GPU
-    progress=True, # show progress
-)
-```
-
-Currently, the following `pretrained` shorthands are available:
-```python
-model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="celeba_distill")
-model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v1")
-model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2")
-model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="paprika")
-```
-
-You can also load the `face2paint` util function. First, install dependencies:
-
-```
-pip install torchvision Pillow numpy
-```
-
-Then, import the function using `torch.hub`:
-```python
-face2paint = torch.hub.load(
-    'bryandlee/animegan2-pytorch:main', 'face2paint', 
-    size=512, device="cpu"
-)
-
-img = Image.open(...).convert("RGB")
-out = face2paint(model, img)
-```

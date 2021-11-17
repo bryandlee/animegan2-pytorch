@@ -79,7 +79,7 @@ More details about `torch.hub` is in [the torch docs](https://pytorch.org/docs/s
 <details>
 <summary>samples</summary>
 
-Trained on <b>256x256</b> face images. Distilled from [webtoon face model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images. See `test_faces.ipynb` for details.
+Trained on <b>256x256</b> face images. Distilled from [webtoon face model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images.
 
 <img src="./samples/face_results.jpg" width="512"> &nbsp; 
   

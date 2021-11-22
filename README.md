@@ -72,7 +72,7 @@ Choose a video, for example mine will be `elon.mp4`, and put it in the `samples`
 
 Extract the frames in this format:
 ```
-ffmpeg -i input/YOUR_VIDEO -vf fps=YOUR_VIDEO_FPS samples/temp/YOUR_VIDEO_NAME%06d.png
+ffmpeg -i samples/YOUR_VIDEO -vf fps=YOUR_VIDEO_FPS samples/temp/YOUR_VIDEO_NAME%06d.png
 ```
 For my example, it'll be:
 ```

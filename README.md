@@ -76,7 +76,7 @@ ffmpeg -i samples/YOUR_VIDEO -vf fps=YOUR_VIDEO_FPS samples/temp/YOUR_VIDEO_NAME
 ```
 For my example, it'll be:
 ```
-ffmpeg -i input/elon.mp4 -vf fps=30 samples/temp/elon%06d.png
+ffmpeg -i samples/elon.mp4 -vf fps=30 samples/temp/elon%06d.png
 ```
 
 Now we going to run the images through the AI:

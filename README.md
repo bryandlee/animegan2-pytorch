@@ -68,7 +68,7 @@ And you will find the results under `sample/results`
 
 We are going to use ffmpeg to extract videos frame by frame, evaluate them inividually, and combine them back together.
 
-Choose a video, for example mine will be `elon.mp4`, and put it in the `input` folder. Also create a folder called `temp`, it'll be where we store all the extracted images from the video.
+Choose a video, for example mine will be `elon.mp4`, and put it in the `samples` folder. Also create a folder called `temp`, it'll be where we store all the extracted images from the video.
 
 Extract the frames in this format:
 ```

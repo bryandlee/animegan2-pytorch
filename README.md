@@ -88,12 +88,12 @@ After this is done, you can combine the result images back together.
 
 Putting frames back together with this format:
 ```
-ffmpeg -i samples/results/YOUR_VIDEO_NAME%06d.png -vf fps=YOUR_VIDEO_FPS samples/YOUR_VIDEO_NAME_result.mp4
+ffmpeg -i samples/results/YOUR_VIDEO_NAME%06d.png -vf fps=YOUR_VIDEO_FPS -pix_fmt yuv420p samples/YOUR_VIDEO_NAME_result.mp4
 ```
 
 For my example, it'll be:
 ```
-ffmpeg -i samples/results/elon%06d.png -vf fps=30 samples/elon_result.mp4
+ffmpeg -i samples/results/elon%06d.png -vf fps=30 -pix_fmt yuv420p samples/elon_result.mp4
 ```
 
 And you can find your video under the samples folder. And that's it!

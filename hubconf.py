@@ -1,5 +1,6 @@
 import torch
 
+
 def generator(pretrained=True, device="cpu", progress=True, check_hash=True):
     from model import Generator
 

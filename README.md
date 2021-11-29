@@ -83,7 +83,7 @@ Results from converted `Paprika` style model (input image, original tensorflow r
 
 Trained on <b>256x256</b> face images. Distilled from [webtoon face model](https://github.com/bryandlee/naver-webtoon-faces/blob/master/README.md#face2webtoon) with L2 + VGG + GAN Loss and CelebA-HQ images.
 
-<img src="./samples/face_results.jpg" width="512"> &nbsp; 
+![face_results](https://user-images.githubusercontent.com/26464535/143959011-1740d4d3-790b-4c4c-b875-24404ef9c614.jpg) &nbsp; 
   
 </details>
 
